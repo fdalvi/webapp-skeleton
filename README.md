@@ -2,6 +2,12 @@
 
 I've not been able to find a simple webapp skeleton that uses a lot of the necessary modules (like react , webpack), so here is one. Launch an issue if you find something wrong! 
 
+# How to run
+- Git clone repository
+- Use `npm install` to install all dependencies
+- Use `npm run dev` to launch webpack and compile js
+- Use `node app.js` to run the app. Currently runs on localhost:8005
+
 # Stack
 ## Backend: 
 - **[NodeJS](https://nodejs.org/en/)**: Backend server 
