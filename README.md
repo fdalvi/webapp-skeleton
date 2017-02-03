@@ -1,0 +1,1 @@
+# Barebones webapp skeleton

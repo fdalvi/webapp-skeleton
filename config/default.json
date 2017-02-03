@@ -1,0 +1,11 @@
+{
+	"sampleapp": {
+		"dbConfig": {
+			"host": "mongodb://localhost/sampleapp"
+		},
+		"server": {
+			"port": "8005",
+			"help_text": "An example of how you can transfer data from config to client"
+		}
+	}
+}

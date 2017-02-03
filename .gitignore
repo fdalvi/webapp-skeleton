@@ -1,0 +1,8 @@
+# OSX Junk
+*.DS_Store
+
+# Node packages
+node_modules
+
+# Compiled JS
+public/dist
