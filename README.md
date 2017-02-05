@@ -1,8 +1,9 @@
 # Barebones webapp skeleton
 
-I've not been able to find a simple webapp skeleton that uses a lot of the necessary modules (like react , webpack), so here is one. Launch an issue if you find something wrong! 
+I've not been able to find a simple webapp skeleton that uses a lot of the necessary modules (like react, webpack, express, etc). This repo aims to provide exactly this. Launch an issue if you find something wrong! 
 
 # How to run
+- Make sure you have NodeJS (`node` should bring up the js interpreter) and MongoDB (`mongo` should bring up a command line interface to your database) installed. 
 - Git clone repository
 - Use `npm install` to install all dependencies
 - Use `npm run dev` to launch webpack and compile js
