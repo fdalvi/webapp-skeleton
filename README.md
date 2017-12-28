@@ -5,6 +5,7 @@ I've not been able to find a simple webapp skeleton that uses a lot of the neces
 # How to run
 - Make sure you have NodeJS (`node` should bring up the js interpreter) and MongoDB (`mongo` should bring up a command line interface to your database) installed. 
 - Git clone repository
+- Incase you do not have `mongo` running, you can create a `data` folder (eg. in your webapp root directory) and run `mongod --data <path-to-app-root>/data`
 - Use `npm install` to install all dependencies
 - Use `npm run dev` to launch webpack and compile js
 - Use `node app.js` to run the app. Currently runs on localhost:8005
