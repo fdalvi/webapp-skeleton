@@ -26,38 +26,39 @@ var config = {
 		people: APP_DIR + '/people.jsx'
 	},
 	resolve: {
-		extensions: ['', '.json', '.jsx', '.js', '.scss', '.css']
+		extensions: ['.json', '.jsx', '.js', '.scss', '.css']
 	},
 	output: {
 		path: BUILD_DIR,
 		filename: '[name].js'
 	},
 	module : {
-		preLoaders: [
-			{ test: /\.json$/, loader: 'json'}
-		],
-		loaders : [
-			{ test: /\.jsx?/, include: APP_DIR, loader: 'babel' },
-			{ test: /\.scss$/, loader: 'style!css!sass?outputStyle=compressed' }
+		rules : [
+			{ test: /\.jsx?/, include: APP_DIR, loader: 'babel-loader' },
+			{ 
+				test: /\.scss$/, 
+				use: [
+					"style-loader",
+					"css-loader",
+					"sass-loader"
+				]
+			}
 		]
 	},
 	plugins: [
     	new webpack.optimize.CommonsChunkPlugin({
     		name: 'vendor',
-    		minChunks: function(module) { return isExternal(module)}
+    		minChunks: function(module) { return isExternal(module); }
     	}),
-    	new webpack.optimize.DedupePlugin(),
-    	new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
+    	new webpack.optimize.UglifyJsPlugin(),
+		new webpack.LoaderOptionsPlugin({
+			options: {
+				sassLoader: {
+					includePaths: [path.resolve(__dirname, "./node_modules")]
+				}
 			}
 		})
-  	],
-  	sassLoader: {
-		includePaths: [
-			'./node_modules'
-		]
-	}
+  	]
 };
 
 module.exports = config;
